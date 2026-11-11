@@ -17,23 +17,17 @@
 
 ## First publication (3.0.0): steps still to do
 
-The public edition was prepared on 2026-11-11 and saved as branch `public-edition-v3` of the private repository. It is one commit, authored with the GitHub no-reply address. The remaining steps change GitHub and need the owner's go-ahead:
+The public edition reuses the repository `iambigd60/greybeard`. On 2026-11-11 its history was replaced with this release's commits, authored with the GitHub no-reply address, and the 2.x branches were removed. The remaining steps are the owner's:
 
-1. Rename the private repository `iambigd60/greybeard` to `iambigd60/greybeard-internal`. It stays private and keeps the internal 2.x edition and its `codex` branch.
-2. Create a new **public** repository `iambigd60/greybeard`, with no README or license (the commit already has them).
-3. Push the saved commit as `main` of the public repository. From any checkout that has the `public-edition-v3` branch:
-
-   ```bash
-   git push https://github.com/iambigd60/greybeard.git public-edition-v3:main
-   ```
-
-   (Before the rename, that branch lives at `iambigd60/greybeard`; after it, at `iambigd60/greybeard-internal`.)
-4. Tag and push `v3.0.0` on `main`, then confirm the release appears with `greybeard-skill.zip` attached.
-5. Test from a machine without GitHub credentials:
+1. In the repository's GitHub settings, change the visibility to **public**.
+2. Tag and push `v3.0.0` on `main` (step 5 above), then confirm the release appears with `greybeard-skill.zip` attached.
+3. Test from a machine without GitHub credentials:
    - `claude plugin install greybeard --marketplace iambigd60/greybeard`
    - `/plugin` lists `greybeard`, and `/mcp` shows no servers added by it.
-6. On the owner's machines:
-   - remove the old private Greybeard marketplace and plugin, which install from the old repository address and bundle MCP servers;
-   - install `greybeard@crusher-labs`;
+4. On the owner's machines:
+   - remove the 2.x Greybeard marketplace and plugin. The 2.x marketplace has a different name but the same repository address, and its plugin bundles MCP servers;
+   - add the marketplace `iambigd60/greybeard` again and install `greybeard@crusher-labs`;
    - put the Crusher Labs context (`examples/crusher-labs.context.md`) under `## Greybeard context` in the user-level `CLAUDE.md`.
-7. Next: the Greybeard page on crusherlabs.ai. The live site is the Next.js app in `iambigd60/crusherlabs-build-club`.
+5. Next: the Greybeard page on crusherlabs.ai.
+
+Delete this section once these steps are done.
