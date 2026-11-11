@@ -11,10 +11,11 @@ Greybeard is an [Agent Skills](https://agentskills.io) skill: the folder `skills
 /plugin install greybeard@crusher-labs
 ```
 
-From a terminal, in one step:
+From a terminal:
 
 ```bash
-claude plugin install greybeard --marketplace Crusher-Labs-AI/greybeard
+claude plugin marketplace add Crusher-Labs-AI/greybeard
+claude plugin install greybeard@crusher-labs
 ```
 
 The skill appears as `greybeard:greybeard`. It triggers on its own when a request matches, and you can also invoke it with `/greybeard:greybeard`.

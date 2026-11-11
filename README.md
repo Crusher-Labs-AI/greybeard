@@ -19,7 +19,7 @@ It is plain Markdown, so you can read all of it before you install it.
 /plugin install greybeard@crusher-labs
 ```
 
-Or in one step from a terminal: `claude plugin install greybeard --marketplace Crusher-Labs-AI/greybeard`
+Or from a terminal: `claude plugin marketplace add Crusher-Labs-AI/greybeard`, then `claude plugin install greybeard@crusher-labs`
 
 **Claude.ai and the Claude desktop app:** download `greybeard-skill.zip` from the [latest release](https://github.com/Crusher-Labs-AI/greybeard/releases/latest), then go to **Customize > Skills > + > Create skill > Upload a skill**.
 

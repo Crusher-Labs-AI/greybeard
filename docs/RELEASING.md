@@ -20,7 +20,7 @@
 On 2026-11-11 the private repository `iambigd60/greybeard` had its history replaced with this release's commits, authored with the GitHub no-reply address, and its 2.x branches removed. It was made public, `v3.0.0` was released, and it was transferred to `Crusher-Labs-AI/greybeard`. GitHub redirects the old address. The remaining steps are the owner's:
 
 1. Test from a machine without GitHub credentials:
-   - `claude plugin install greybeard --marketplace Crusher-Labs-AI/greybeard`
+   - `claude plugin marketplace add Crusher-Labs-AI/greybeard`, then `claude plugin install greybeard@crusher-labs`
    - `/plugin` lists `greybeard`, and `/mcp` shows no servers added by it.
 2. On each of the owner's machines that still has 2.x:
    - remove the 2.x Greybeard marketplace and plugin, which bundles MCP servers;
