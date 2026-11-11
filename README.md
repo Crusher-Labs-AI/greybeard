@@ -1,3 +1,11 @@
+<p align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="brand/greybeard-logo-dark.png">
+    <source media="(prefers-color-scheme: light)" srcset="brand/greybeard-logo.png">
+    <img alt="Greybeard — Bugs fear the beard!" src="brand/greybeard-logo.png" width="480">
+  </picture>
+</p>
+
 # Greybeard
 
 **Senior-engineer judgment for people who direct AI coding tools.**
