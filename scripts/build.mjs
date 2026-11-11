@@ -128,7 +128,31 @@ const playbookNote = (where, installed) =>
   "If they are not available, apply section 5 (the gate), section 6 (reporting) and section 8 (mode rules), " +
   "and treat any version-, limit- or price-specific fact as *Assumed* unless you can check current documentation.\n";
 const bodyOut = body.replace(/^\n+/, "").replace(/^# Greybeard\n/, "");
+
+// Short paste-in version for instruction boxes capped at 8,000 characters, such as a ChatGPT custom GPT.
+// It keeps the rules that work without files or tools and drops sections 1, 3 and 9 and the playbook table.
+const SHORT_FILE = "adapters/SYSTEM_PROMPT_SHORT.md";
+const SHORT_LIMIT = 8000;
+const sections = {};
+for (const part of bodyOut.split(/^(?=## \d+\. )/m)) {
+  const m = part.match(/^## (\d+)\. /);
+  if (m) sections[m[1]] = part.trim() + "\n";
+}
+const quickOnly = (sections["2"] || "").split(/^- \*\*Anything matching/m)[0].trim() + "\n";
+if (!["2", "4", "5", "6", "7", "8"].every((n) => sections[n])) fail(`${SHORT_FILE}: SKILL.md section numbering changed; update scripts/build.mjs`);
+if (quickOnly.trim() === (sections["2"] || "").trim()) fail(`${SHORT_FILE}: SKILL.md section 2 changed shape; update scripts/build.mjs`);
+const shortPrompt =
+  `${SOURCE_NOTE}\n# Greybeard: engineering guidance (short version)\n\n` +
+  "> **When this applies.** Use this only for engineering work on web and mobile apps (designs, reviews, launch and " +
+  "security checks, outages, cost, refactors, plans). Work normally on anything else.\n>\n" +
+  "> Short paste-in version of the Greybeard skill. Files it names (`references/...`) are not available here: " +
+  "apply sections 5, 6 and 8 directly, and treat version-, limit- or price-specific facts as *Assumed* unless checked against current docs.\n\n" +
+  [quickOnly, sections["4"], sections["5"], sections["6"], sections["7"], sections["8"]].join("\n");
+const shortChars = [...shortPrompt].length;
+if (shortChars > SHORT_LIMIT) fail(`${SHORT_FILE} is ${shortChars} characters; it must stay at or under ${SHORT_LIMIT}`);
+
 const adapters = {
+  [SHORT_FILE]: shortPrompt,
   "adapters/SYSTEM_PROMPT.md":
     `${SOURCE_NOTE}\n# Greybeard: engineering guidance\n\n${scopeNote}>\n` +
     playbookNote("This is the paste-in version of the Greybeard skill for tools without skill support.", "") +

@@ -131,9 +131,11 @@ The plan list below comes from OpenAI's help article, checked on 2026-11-11. Ope
 1. Unzip `greybeard-skill.zip`, or clone the repository and use `skills/greybeard/`.
 2. Go to **Skills > Create** and upload the `greybeard` folder.
 
-**Free, Go, Plus and Pro: paste the instructions.** These plans don't have skills. Paste [`adapters/SYSTEM_PROMPT.md`](../adapters/SYSTEM_PROMPT.md) into one of these:
+**Free, Go, Plus and Pro: paste the instructions.** These plans don't have skills. Paste [`adapters/SYSTEM_PROMPT_SHORT.md`](../adapters/SYSTEM_PROMPT_SHORT.md) into one of these:
 - a Project's instructions, so it applies to every chat in that Project;
 - a custom GPT's instructions.
+
+Use the short version here. Users report that a custom GPT's instructions stop at 8,000 characters. OpenAI doesn't publish the number, and Project instructions may have a similar cap. The full `SYSTEM_PROMPT.md` is about 12,900 characters, so it won't save. The short version stays under 8,000 (the build checks this). It keeps the quick-answer rule, the live-system rules, the production-readiness gate, reporting, trade-offs and mode rules. It leaves out the playbooks, project-context loading and codebase rules.
 
 ## GitHub Copilot
 
@@ -245,7 +247,7 @@ Official docs: [Skills, plugins and marketplaces](https://docs.x.ai/build/featur
 
 ### Grok app and web
 
-As of 2026-11-11, xAI documents no skills support in the Grok app or on the web. Paste [`adapters/SYSTEM_PROMPT.md`](../adapters/SYSTEM_PROMPT.md) into Grok's custom instructions instead.
+As of 2026-11-11, xAI documents no skills support in the Grok app or on the web. Paste [`adapters/SYSTEM_PROMPT.md`](../adapters/SYSTEM_PROMPT.md) into Grok's custom instructions instead. If it's too long for the box, use [`adapters/SYSTEM_PROMPT_SHORT.md`](../adapters/SYSTEM_PROMPT_SHORT.md).
 
 ## Other Agent Skills clients
 
@@ -254,6 +256,8 @@ Unzip `greybeard-skill.zip` (or copy `skills/greybeard/` from a clone) into the 
 ## Tools without skill support
 
 Paste [`adapters/SYSTEM_PROMPT.md`](../adapters/SYSTEM_PROMPT.md) into the tool's system, project or custom instructions. It is generated from SKILL.md. Without the playbook files it uses the built-in mode rules.
+
+If the tool's instruction box is too small, use [`adapters/SYSTEM_PROMPT_SHORT.md`](../adapters/SYSTEM_PROMPT_SHORT.md) instead. It stays under 8,000 characters and keeps the core rules. It leaves out the playbooks, project-context loading and codebase rules.
 
 ## Tuning it to you
 
