@@ -1,0 +1,23 @@
+{
+  "name": "greybeard",
+  "displayName": "Greybeard",
+  "version": "3.0.0",
+  "description": "Senior-engineer judgment for people who direct AI coding tools: a production-readiness gate, an explicit way to settle trade-offs, and reports the product owner can act on. Nine modes, from MVP builds and backend design to launch reviews, incident analysis and cost investigations.",
+  "author": {
+    "name": "Crusher Labs AI",
+    "url": "https://crusherlabs.ai"
+  },
+  "homepage": "https://crusherlabs.ai",
+  "repository": "https://github.com/iambigd60/greybeard",
+  "license": "MIT",
+  "keywords": [
+    "software-engineering",
+    "architecture",
+    "production-readiness",
+    "security-review",
+    "incident-response",
+    "cost",
+    "supabase",
+    "nextjs"
+  ]
+}

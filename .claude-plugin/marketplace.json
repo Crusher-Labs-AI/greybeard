@@ -1,0 +1,24 @@
+{
+  "name": "crusher-labs",
+  "owner": {
+    "name": "Crusher Labs AI",
+    "url": "https://crusherlabs.ai"
+  },
+  "metadata": {
+    "description": "Agent skills and plugins from Crusher Labs AI."
+  },
+  "plugins": [
+    {
+      "name": "greybeard",
+      "source": "./",
+      "category": "development",
+      "tags": [
+        "software-engineering",
+        "architecture",
+        "production-readiness",
+        "security-review",
+        "cost"
+      ]
+    }
+  ]
+}

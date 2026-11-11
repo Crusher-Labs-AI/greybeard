@@ -1,0 +1,6 @@
+schema_version: "1.1"
+name: launch-review
+description: Pre-launch review of a small Next.js + Supabase game with planted defects, for a non-programmer owner. Run with --scaffold so setup.sh writes the fixture app.
+tags: [smoke, security]
+context:
+  scaffold_script: setup.sh

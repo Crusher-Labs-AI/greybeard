@@ -1,0 +1,9 @@
+# Release artifacts are built by scripts/build.mjs and attached to GitHub Releases
+dist/
+
+# Eval run output
+evals/results/
+
+# OS cruft
+.DS_Store
+Thumbs.db
