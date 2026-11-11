@@ -37,6 +37,39 @@ Or from a terminal: `claude plugin marketplace add Crusher-Labs-AI/greybeard`, t
 
 [docs/INSTALL.md](docs/INSTALL.md) has the steps for every platform, plus updating and tools without skill support.
 
+## How to use it
+
+You don't need a command. Describe the job in your own words, and Greybeard switches on when the request fits. In Claude Code you can also call it directly: type `/greybeard:greybeard` followed by your request.
+
+Requests like these switch it on:
+
+- "**Is this ready to launch?**" / "Run a security review before we launch"
+- "**Why did the site go down?**" / "Find the root cause of last night's outage"
+- "**What will this cost to run?**" / "Why is the app slow, and why is the bill so high?"
+- "**Design the MVP** for…" / "Design the backend and database for…"
+- "**Audit this codebase**" before you take it over or build on it
+- "**Plan this migration**" / "Give me a roadmap" / "Plan a safe refactor of…"
+- "**Check this change before I ship it**" when it touches logins, access rules, database migrations, secrets or deploy settings
+
+It isn't meant for routine code edits, a single failing test, reviewing an ordinary diff, visual design or styling, or questions about one library's API. Those get your AI tool's normal help.
+
+### Example requests
+
+```text
+Is this app ready to launch? It's Next.js on Vercel with Supabase for logins and data.
+Keep it plain, and tell me what must be fixed before real users arrive.
+```
+
+```text
+The site was down for about an hour last night. Here are the logs.
+What happened, and what stops it happening again?
+```
+
+```text
+Design the MVP for a daily puzzle game with shareable results.
+I need the architecture, the database, and the monthly cost at launch and at 10x users.
+```
+
 ## What it does
 
 Describe the job. Greybeard picks the mode that fits and loads only that playbook:
