@@ -29,11 +29,13 @@ It is plain Markdown, so you can read all of it before you install it.
 
 Or from a terminal: `claude plugin marketplace add Crusher-Labs-AI/greybeard`, then `claude plugin install greybeard@crusher-labs`
 
-**Claude.ai and the Claude desktop app:** download `greybeard-skill.zip` from the [latest release](https://github.com/Crusher-Labs-AI/greybeard/releases/latest), then go to **Customize > Skills > + > Create skill > Upload a skill**.
+**Claude.ai and the Claude desktop app:** download `greybeard-skill.zip` from the [latest release](https://github.com/Crusher-Labs-AI/greybeard/releases/latest), then go to **Customize > Skills > + > + Create skill > Upload a skill** and toggle it on. **Code execution and file creation** must be on in Settings > Capabilities.
 
 **Codex and other Agent Skills clients:** copy `skills/greybeard/` into your skills folder (for Codex, `~/.agents/skills/greybeard/`).
 
-[docs/INSTALL.md](docs/INSTALL.md) covers every platform, updating, and tools without skill support.
+**ChatGPT, GitHub Copilot, Google Gemini and xAI Grok** are supported too: as a skill where the platform has skills, and as pasted instructions where it doesn't.
+
+[docs/INSTALL.md](docs/INSTALL.md) has the steps for every platform, plus updating and tools without skill support.
 
 ## What it does
 
