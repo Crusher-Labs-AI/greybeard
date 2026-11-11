@@ -15,13 +15,13 @@ It is plain Markdown, so you can read all of it before you install it.
 **Claude Code** (two commands):
 
 ```shell
-/plugin marketplace add iambigd60/greybeard
+/plugin marketplace add Crusher-Labs-AI/greybeard
 /plugin install greybeard@crusher-labs
 ```
 
-Or in one step from a terminal: `claude plugin install greybeard --marketplace iambigd60/greybeard`
+Or in one step from a terminal: `claude plugin install greybeard --marketplace Crusher-Labs-AI/greybeard`
 
-**Claude.ai and the Claude desktop app:** download `greybeard-skill.zip` from the [latest release](https://github.com/iambigd60/greybeard/releases/latest), then go to **Customize > Skills > + > Create skill > Upload a skill**.
+**Claude.ai and the Claude desktop app:** download `greybeard-skill.zip` from the [latest release](https://github.com/Crusher-Labs-AI/greybeard/releases/latest), then go to **Customize > Skills > + > Create skill > Upload a skill**.
 
 **Codex and other Agent Skills clients:** copy `skills/greybeard/` into your skills folder (for Codex, `~/.agents/skills/greybeard/`).
 

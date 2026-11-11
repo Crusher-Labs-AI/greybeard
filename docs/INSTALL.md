@@ -7,14 +7,14 @@ Greybeard is an [Agent Skills](https://agentskills.io) skill: the folder `skills
 ### As a plugin (recommended: easy updates)
 
 ```shell
-/plugin marketplace add iambigd60/greybeard
+/plugin marketplace add Crusher-Labs-AI/greybeard
 /plugin install greybeard@crusher-labs
 ```
 
 From a terminal, in one step:
 
 ```bash
-claude plugin install greybeard --marketplace iambigd60/greybeard
+claude plugin install greybeard --marketplace Crusher-Labs-AI/greybeard
 ```
 
 The skill appears as `greybeard:greybeard`. It triggers on its own when a request matches, and you can also invoke it with `/greybeard:greybeard`.
@@ -29,7 +29,7 @@ or turn on auto-update under `/plugin` > Marketplaces > crusher-labs > Enable au
 
 ### As a plain skill (no plugin)
 
-Download `greybeard-skill.zip` from the [latest release](https://github.com/iambigd60/greybeard/releases/latest) and unzip it into your skills folder:
+Download `greybeard-skill.zip` from the [latest release](https://github.com/Crusher-Labs-AI/greybeard/releases/latest) and unzip it into your skills folder:
 
 ```bash
 # All projects
@@ -56,7 +56,7 @@ claude plugin validate /path/to/greybeard
 ## Claude.ai and the Claude desktop app
 
 1. Make sure code execution is enabled. On Free, Pro and Max this is in Settings > Capabilities. On Team and Enterprise, an owner allows skills under Organization settings.
-2. Download `greybeard-skill.zip` from the [latest release](https://github.com/iambigd60/greybeard/releases/latest).
+2. Download `greybeard-skill.zip` from the [latest release](https://github.com/Crusher-Labs-AI/greybeard/releases/latest).
 3. Go to **Customize > Skills > + > Create skill > Upload a skill** and choose the zip.
 
 To update, upload the newer zip.

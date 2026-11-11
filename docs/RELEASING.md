@@ -17,17 +17,15 @@
 
 ## First publication (3.0.0): steps still to do
 
-The public edition reuses the repository `iambigd60/greybeard`. On 2026-11-11 its history was replaced with this release's commits, authored with the GitHub no-reply address, and the 2.x branches were removed. The remaining steps are the owner's:
+On 2026-11-11 the private repository `iambigd60/greybeard` had its history replaced with this release's commits, authored with the GitHub no-reply address, and its 2.x branches removed. It was made public, `v3.0.0` was released, and it was transferred to `Crusher-Labs-AI/greybeard`. GitHub redirects the old address. The remaining steps are the owner's:
 
-1. In the repository's GitHub settings, change the visibility to **public**.
-2. Tag and push `v3.0.0` on `main` (step 5 above), then confirm the release appears with `greybeard-skill.zip` attached.
-3. Test from a machine without GitHub credentials:
-   - `claude plugin install greybeard --marketplace iambigd60/greybeard`
+1. Test from a machine without GitHub credentials:
+   - `claude plugin install greybeard --marketplace Crusher-Labs-AI/greybeard`
    - `/plugin` lists `greybeard`, and `/mcp` shows no servers added by it.
-4. On the owner's machines:
-   - remove the 2.x Greybeard marketplace and plugin. The 2.x marketplace has a different name but the same repository address, and its plugin bundles MCP servers;
-   - add the marketplace `iambigd60/greybeard` again and install `greybeard@crusher-labs`;
+2. On each of the owner's machines that still has 2.x:
+   - remove the 2.x Greybeard marketplace and plugin, which bundles MCP servers;
+   - add the marketplace `Crusher-Labs-AI/greybeard` and install `greybeard@crusher-labs`;
    - put the Crusher Labs context (`examples/crusher-labs.context.md`) under `## Greybeard context` in the user-level `CLAUDE.md`.
-5. Next: the Greybeard page on crusherlabs.ai.
+3. Next: the Greybeard page on crusherlabs.ai.
 
 Delete this section once these steps are done.
